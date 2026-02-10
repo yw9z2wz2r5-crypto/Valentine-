@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine 💖</title>
+  <style>
+    body {
+      background: #ffe6f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    h1 { color: #e60073; }
+    img {
+      width: 280px;
+      border-radius: 20px;
+      margin: 20px 0;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+    .yes { background: #ff4da6; color: white; }
+    .no {
+      background: #999;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+<div id="page1">
+  <h1>Will you be my Valentine? 💘</h1>
+  <img src="82E9F012-C040-4DBC-8830-DA4F3BFB083A.jpeg">
+  <br>
+  <button class="yes" onclick="showPage2()">Ναι 💕</button>
+  <button class="no" id="noBtn">Όχι 💔</button>
+</div>
+
+<div id="page2" style="display:none;">
+  <h1>Μετά την βόλτα λολ 🐰😏</h1>
+  <img src="2A6651B6-53B0-4959-A851-71BC3AC80558.jpeg">
+</div>
+
+<script>
+  const noBtn = document.getElementById("noBtn");
+  noBtn.addEventListener("mouseover", () => {
+    noBtn.style.top = Math.random() * 80 + "vh";
+    noBtn.style.left = Math.random() * 80 + "vw";
+  });
+
+  function showPage2() {
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
